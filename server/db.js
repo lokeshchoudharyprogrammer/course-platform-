@@ -6,7 +6,10 @@ import { MongoClient } from 'mongodb';
 
 const error = chalk.bold.red;
 const success = chalk.bgGreenBright;
-const client = new MongoClient(process.env.MONGODB_URL);
+const client = new MongoClient(process.env.MONGODB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
 const Db =async  () => {
     
@@ -20,7 +23,7 @@ const Db =async  () => {
         // Ensures that the client will close when you finish/error
         await client.close();
 
-        
+
       }
 
 }
