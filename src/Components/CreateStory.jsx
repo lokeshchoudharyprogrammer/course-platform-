@@ -25,6 +25,7 @@ export const CreateStory = () => {
     const RedirecttoDashboard = () => {
         navigate("/");
     }
+
     const handleGenerateStory = async () => {
         try {
             const response = await fetch('https://enthusiastic-lime-starfish.cyclic.cloud/api/generate-story', {
@@ -65,6 +66,7 @@ export const CreateStory = () => {
     };
 
 
+    
     return (
         <>
 
